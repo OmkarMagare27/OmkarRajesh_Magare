@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-%&-q$kpfp8-!fi&+p8mwv4d*pftod)c4vyz^(1spqn4*!p=9p3"
+SECRET_KEY = "django-insecure--0zcrese$f4pgym8+g&n#8m$@7+(t87d7&^4#($8*iw&h+=%rz"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -33,11 +35,12 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
+    'contacts',
+    'widget_tweaks',
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "contacts"
 ]
 
 MIDDLEWARE = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = "OmkarRajesh_Magare.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

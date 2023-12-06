@@ -1,10 +1,30 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    /* Custom styles */
+    .center-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+    .welcome-header {
+        color: #007BFF; /* Bootstrap primary color */
+    }
+    .welcome-description {
+        color: #6c757d; /* Bootstrap secondary color */
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+</style>
+
+<div class="center-container">
+    <h1 class="welcome-header">Welcome to the People Hub</h1>
+    <p class="welcome-description">This is a Django application to manage your connections.</p>
+    <a href="/list/" class="btn btn-primary">View Contacts</a>
+</div>
+
+{% endblock %}

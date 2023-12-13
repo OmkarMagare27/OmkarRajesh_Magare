@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>People Hub</title>
+    <title>Contact Management</title>
     <!-- Bootstrap CSS and JS CDN links -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -50,14 +50,14 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-            <a class="navbar-brand" href="/">People Hub</a>
+            <a class="navbar-brand" href="/">Contact Management</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'landing_page' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'list_contacts' %}">People</a>
+                        <a class="nav-link" href="{% url 'list_contacts' %}">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +66,7 @@
 
     <main class="container mt-4">
         <div class="jumbotron text-center">
-            <h1>Welcome to People Hub</h1>
+            <h1>Welcome to Contact Management</h1>
             <p>Manage your contacts efficiently and effortlessly</p>
             <a href="{% url 'create_contact' %}" class="btn btn-light">Add New Contact</a>
         </div>
